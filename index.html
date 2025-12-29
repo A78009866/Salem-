@@ -7,51 +7,51 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background-color: #0b111d; /* لون خلفية متناسق مع الصورة */
+            background-color: #0b111d; /* لون خلفية غامق ومتناسق */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
         }
 
         .container {
-            position: relative;
-            max-width: 500px;
-            width: 95%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-radius: 20px;
-            overflow: hidden;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
         }
 
         .main-image {
             width: 100%;
-            display: block;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            margin-bottom: 25px; /* مسافة بين الصورة والزر */
         }
 
-        /* الطبقة الشفافة فوق زر "حمل الآن" */
-        .download-link {
-            position: absolute;
-            bottom: 31%; /* تم ضبطه ليناسب مكان الزر الأبيض في الصورة */
-            right: 6%;  /* تم ضبطه ليناسب مكان الزر الأبيض في الصورة */
-            width: 30%; /* عرض المنطقة القابلة للضغط */
-            height: 7%;  /* طول المنطقة القابلة للضغط */
-            background-color: rgba(255, 255, 255, 0); /* شفافة تماماً */
+        .download-btn {
+            display: inline-block;
+            width: 80%;
+            padding: 15px 0;
+            background-color: #ffffff; /* لون الزر أبيض */
+            color: #000000; /* لون النص أسود */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
             border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s, background-color 0.2s;
         }
 
-        /* تأثير بسيط عند تمرير الماوس للتأكد أن الزر يعمل */
-        .download-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        .download-btn:active {
+            transform: scale(0.95); /* تأثير عند الضغط */
+            background-color: #e0e0e0;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                width: 90%;
-            }
+        .footer-text {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
@@ -60,9 +60,11 @@
     <div class="container">
         <img src="https://res.cloudinary.com/duixjs8az/image/upload/v1767031280/post_media/1767031280357-Brown%20Black%20Modern%20Apps%20Food%20Instagram%20Post.png" alt="Aite App" class="main-image">
         
-        <a href="https://www.mediafire.com/file/u6hxbo7q03ae1xs/Aite.apk/file?dkey=q0p3mv9i92u&r=1741" 
-           class="download-link" 
-           title="اضغط للتحميل الآن"></a>
+        <a href="https://www.mediafire.com/file/u6hxbo7q03ae1xs/Aite.apk/file?dkey=q0p3mv9i92u&r=1741" class="download-btn">
+            حمل الآن !
+        </a>
+
+        <p class="footer-text">اضغط على الزر أعلاه لبدء التحميل مباشرة</p>
     </div>
 
 </body>
