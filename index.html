@@ -11,7 +11,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #0b111d; /* لون خلفية غامق ومتناسق */
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #0b111d; /* خلفية داكنة احترافية */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
         }
@@ -24,34 +26,42 @@
 
         .main-image {
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            margin-bottom: 25px; /* مسافة بين الصورة والزر */
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            margin-bottom: 30px;
         }
 
         .download-btn {
             display: inline-block;
-            width: 80%;
-            padding: 15px 0;
-            background-color: #ffffff; /* لون الزر أبيض */
-            color: #000000; /* لون النص أسود */
+            width: 90%;
+            padding: 18px 0;
+            background-color: #ffffff; /* زر أبيض مثل الموجود بالصورة */
+            color: #000000;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            background-color: #f0f0f0;
         }
 
         .download-btn:active {
-            transform: scale(0.95); /* تأثير عند الضغط */
-            background-color: #e0e0e0;
+            transform: scale(0.97);
         }
 
-        .footer-text {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #888;
+        .info {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -60,11 +70,14 @@
     <div class="container">
         <img src="https://res.cloudinary.com/duixjs8az/image/upload/v1767031280/post_media/1767031280357-Brown%20Black%20Modern%20Apps%20Food%20Instagram%20Post.png" alt="Aite App" class="main-image">
         
-        <a href="https://www.mediafire.com/file/u6hxbo7q03ae1xs/Aite.apk/file?dkey=q0p3mv9i92u&r=1741" class="download-btn">
+        <a href="https://drive.google.com/uc?export=download&id=1jPatmbKkYwZdqQnEY8KCF1_9_BYgburJ" class="download-btn">
             حمل الآن !
         </a>
 
-        <p class="footer-text">اضغط على الزر أعلاه لبدء التحميل مباشرة</p>
+        <div class="info">
+            نسخة APK آمنة ومباشرة <br>
+            تأكد من تفعيل "التثبيت من مصادر غير معروفة" في هاتفك
+        </div>
     </div>
 
 </body>
